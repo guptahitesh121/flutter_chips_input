@@ -363,6 +363,9 @@ class ChipsInputState<T> extends State<ChipsInput<T>>
   @override
   void didUpdateWidget(ChipsInput oldWidget) {
     super.didUpdateWidget(oldWidget);
+    // Added by Me start>
+    _chips = Set.from(widget.initialValue);
+    // Added by Me end>
     /* if(widget.focusNode != oldWidget.focusNode){
       oldWidget.focusNode.removeListener(_handleFocusChanged);
       _focusAttachment?.detach();
